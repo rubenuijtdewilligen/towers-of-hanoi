@@ -1,0 +1,123 @@
+/* Towers of Hanoi game remade in JavaScript
+Copyright (C) 2021 Ruben Uijtdewilligen
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>. */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: rgb(255, 232, 197);
+}
+
+button {
+  border-color: #f0b966;
+}
+
+a {
+  color: #f0b966;
+}
+
+.row {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.column {
+  display: flex;
+  justify-content: center;
+}
+
+.tower {
+  width: 1vh;
+  height: 25vh;
+  background-color: black;
+  border-radius: 100px 100px 0 0;
+}
+
+.disk {
+  height: 2rem;
+  position: absolute;
+  border-radius: 10000px;
+  transform: translateX(-47.5%);
+}
+
+#disk-1 {
+  background-color: #f8df81;
+  width: 240px;
+}
+
+#disk-2 {
+  background-color: #f6aa90;
+  width: 220px;
+}
+
+#disk-3 {
+  background-color: #f6b4bf;
+  width: 200px;
+}
+
+#disk-4 {
+  background-color: #d5b6d5;
+  width: 180px;
+}
+
+#disk-5 {
+  background-color: #badfda;
+  width: 160px;
+}
+
+#disk-6 {
+  background-color: #9bd0b7;
+  width: 140px;
+}
+
+#disk-7 {
+  background-color: #badfda;
+  width: 120px;
+}
+
+#disk-8 {
+  background-color: #d5b6d5;
+  width: 100px;
+}
+
+#disk-9 {
+  background-color: #f6b4bf;
+  width: 80px;
+}
+
+.disk-selected {
+  border: 3px solid black;
+}
+
+.homepage-category {
+  border: 5px solid #f0b966;
+  margin-bottom: 4vh;
+  border-radius: 40px;
+}
+
+.solution-container {
+  border: 5px solid #f0b966;
+  margin-bottom: 4vh;
+  padding-top: 2.5vh;
+  padding-bottom: 2.5vh;
+  border-radius: 40px;
+}

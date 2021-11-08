@@ -1,0 +1,37 @@
+{
+  "name": "towers-of-hanoi",
+  "version": "1.0.0",
+  "description": "This is the Towers of Hanoi game remade in JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rubenuijtdewilligen/towers-of-hanoi.git"
+  },
+  "keywords": [
+    "towers",
+    "of",
+    "hanoi",
+    "math",
+    "maths",
+    "game",
+    "javascript"
+  ],
+  "author": "Ruben Uijtdewilligen <ruben@uijtdewilligenbv.nl> (rubenuijtdewilligen.com)",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/rubenuijtdewilligen/towers-of-hanoi/issues"
+  },
+  "homepage": "https://hanoi.rbn.wtf/",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.4"
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0",
+    "nodemon": "^2.0.14"
+  }
+}

@@ -1,0 +1,34 @@
+<!-- Towers of Hanoi game remade in JavaScript
+Copyright (C) 2021 Ruben Uijtdewilligen
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>. -->
+
+<div style='text-align: center; width: 100vw;'>
+  <h3>Towers of Hanoi</h3>
+  <div class='row homepage-category'>
+    <br />
+    <form id='menu'>
+      <label for='disks'>Disks (max 9 for game, unlimited for solver):</label>
+      <input type='number' id='disks' name='disks' min='1' />
+      <br />
+      <button type='button' onclick='startGame()'>Start game</button>
+      <button type='button' onclick='solve()'>Solve</button>
+    </form>
+  </div>
+  <p>Made by
+    <a href='https://rubenuijtdewilligen.com/'>Ruben Uijtdewilligen</a></p>
+</div>
+
+<!-- JavaScript -->
+<script src='/static/js/menu.js'></script>
