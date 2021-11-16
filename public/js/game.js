@@ -21,6 +21,8 @@ const towerContainer3 = document.getElementById('third-tower-container');
 const tower1 = document.getElementById('first-tower');
 const tower2 = document.getElementById('second-tower');
 const tower3 = document.getElementById('third-tower');
+const stepsTaken = document.getElementById('steps-taken');
+const stepsMinimal = document.getElementById('steps-minimal');
 
 // This JSON object stores what disks towers currently hold
 const gameData = {
@@ -28,6 +30,7 @@ const gameData = {
   2: [],
   3: [],
   selected: 0,
+  steps: 0,
 };
 
 // This variable will store the tower the selected disk is currently part of
@@ -36,6 +39,9 @@ let prevTower;
 // Get amount of disks from URL
 const urlParams = new URLSearchParams(window.location.search);
 const totalDisks = parseInt(urlParams.get('disks'));
+
+// Calculate the minimal amount of steps required to solve the problem
+const minimalSteps = Math.pow(2, totalDisks) - 1;
 
 // Check if amount of disks is lower than 10 so that the game doesn't crash
 if (totalDisks >= 10) {
@@ -79,6 +85,8 @@ function drawGame() {
   for (i = 0; i < gameData[3].length + 1; i++) {
     tower3.appendChild(createDiskElement(i, gameData[3][i]));
   }
+
+  writeStatistics();
 }
 
 function createDiskElement(i, id) {
@@ -88,6 +96,12 @@ function createDiskElement(i, id) {
   disk.id = `disk-${id}`;
 
   return disk;
+}
+
+function writeStatistics() {
+  stepsTaken.innerHTML = `<b>Steps Taken:</b> ${gameData.steps}`;
+  stepsMinimal.innerHTML = `<b>Minimal Steps:</b> ${minimalSteps}`;
+  return;
 }
 
 function sortArrays() {
@@ -126,6 +140,7 @@ function moveOnClick(towerContainer) {
 
   // If there is a disk selected
   if (gameData.selected > 0) {
+    gameData.steps++;
     if (
       gameData.selected <
       gameData[towerNumber][gameData[towerNumber].length - 1]
@@ -161,7 +176,6 @@ function moveOnClick(towerContainer) {
   }
 
   // Else select the top disk
-  gameData;
   prevTower = towerNumber;
   gameData.selected = gameData[towerNumber][gameData[towerNumber].length - 1];
   sortArrays();
